@@ -1,7 +1,7 @@
 pep8==1.7.0
 pyflakes==1.4.0
 # for compare script
-elasticsearch==5.0.1
+elasticsearch==5.2.0
 aiohttp==1.2.0
 yarl==0.7.1
 pytest==3.0.5
