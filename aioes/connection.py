@@ -24,7 +24,7 @@ class Connection:
                 loop=loop,
                 verify_ssl=verify_ssl),
             loop=loop)
-        self._base_url = '{0.scheme}://{0.host}:{0.port}/'.format(endpoint)
+        self._base_url = '{0.scheme}://{0.host}:{0.port}'.format(endpoint)
 
     @property
     def endpoint(self):
