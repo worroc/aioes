@@ -130,7 +130,7 @@ class Elasticsearch:
         if percolate is not default:
             params['percolate'] = percolate
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if replication is not default:
             if not isinstance(replication, str):
                 raise TypeError("'replication' parameter is not a string")
@@ -185,9 +185,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = "true" if bool(realtime) else "false"
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if routing is not default:
             params['routing'] = routing
 
@@ -224,9 +224,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = "true" if bool(realtime) else "false"
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if routing is not default:
             params['routing'] = routing
         if version is not default:
@@ -273,9 +273,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = "true" if bool(realtime) else "false"
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if routing is not default:
             params['routing'] = routing
         if version is not default:
@@ -326,7 +326,7 @@ class Elasticsearch:
         if parent is not default:
             params['parent'] = parent
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if replication is not default:
             if not isinstance(replication, str):
                 raise TypeError("'replication' parameter is not a string")
@@ -392,9 +392,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = "true" if bool(realtime) else "false"
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if routing is not default:
             params['routing'] = routing
 
@@ -747,7 +747,7 @@ class Elasticsearch:
         if parent is not default:
             params['parent'] = parent
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if routing is not default:
             params['routing'] = routing
         if version is not default:
@@ -831,7 +831,7 @@ class Elasticsearch:
                 raise ValueError("'consistency' parameter should be one of "
                                  "'one', 'quorum', 'all'")
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = "true" if bool(refresh) else "false"
         if routing is not default:
             params['routing'] = routing
         if replication is not default:
